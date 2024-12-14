@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="logo">Logo</div>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="#" class="active">About</a>
+            <a href="#">Contact</a>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </header>
+
+    <main>
+
+        <div class="canvas-container">
+        <canvas id="test"></canvas></div>
+        <div class="hero section">
+            
+        <h1>Phenyo Koikoi</h1>
+        
+        <p class="pp">Hi, I’m a South African based product designer</p>
+        <p class="para">who transforms complex problems into simple, user-centered solutions.</p>
+        </div>
+
+        <section class="projects">
+            <h2>My Work</h2>
+            <div class="project-grid">
+                <div class="project">
+                    <img src="RoomifyWork.png" alt="Roomify">
+                    <div class="project-content">
+                        <h3 class="project-title">Roomify</h3>
+                        <p class="project-category">Accommodation</p>
+                        <p class="project-description">Responsive Web App, UI/UX Design</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="FinoraWork.png" alt="Flare">
+                    <div class="project-content">
+                        <h3 class="project-title">Finora</h3>
+                        <p class="project-category">Banking & Finance</p>
+                        <p class="project-description">Mobile App, UI/UX Design</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="UniWork.png" alt="Flare">
+                    <div class="project-content">
+                        <h3 class="project-title">UniEats</h3>
+                        <p class="project-category">E-commerce</p>
+                        <p class="project-description">Mobile App, UI/UX Design</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="NwuWork.png" alt="Flare">
+                    <div class="project-content">
+                        <h3 class="project-title">NWU</h3>
+                        <p class="project-category">University Registration System</p>
+                        <p class="project-description">Mobile App, UI/UX Design</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="FlareWork.png" alt="Flare">
+                    <div class="project-content">
+                        <h3 class="project-title">Flare</h3>
+                        <p class="project-category">E-commerce</p>
+                        <p class="project-description">Mobile App, UI/UX Design</p>
+                    </div>
+                </div>
+
+                <div class="project">
+                    <img src="HealthWork.png" alt="Flare">
+                    <div class="project-content">
+                        <h3 class="project-title">Smart Health</h3>
+                        <p class="project-category">E-commerce</p>
+                        <p class="project-description">Mobile App, UI/UX Design</p>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Phenyo Koikoi. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        function toggleMenu() {
+            const nav = document.querySelector('nav');
+            nav.classList.toggle('active');
+        }
+
+        document.querySelectorAll("nav a").forEach(link => {
+    link.addEventListener("click", function() {
+        // Remove 'active' class from all links
+        document.querySelectorAll("nav a").forEach(nav => nav.classList.remove("active"));
+
+        // Add 'active' class to the clicked link
+        this.classList.add("active");
+    });
+});
+
+    </script>
+</body>
+</html>
